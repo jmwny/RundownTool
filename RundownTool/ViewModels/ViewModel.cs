@@ -108,7 +108,7 @@ namespace RundownTool.ViewModels
 
             try {
                 LoadTemplate();
-                StatusText = "Template successfully loaded";
+                StatusText = "Templates successfully loaded";
                 ExportButtonEnable = true;
                 ProcessButtonEnable = false;
             }

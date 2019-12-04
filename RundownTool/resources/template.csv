@@ -1,0 +1,59 @@
+01 - Lower Manhattan Hospital,1,01-DAVID,09:00 PM,CURRENT
+01 - Lower Manhattan Hospital,1,01-GEORGE,11:59 PM,CURRENT
+01 - Lower Manhattan Hospital,1,01-VICTOR,11:00 PM,CURRENT
+01 - Lower Manhattan Hospital,1,01-WILLIAM,11:59 PM,CURRENT
+01 - Lower Manhattan Hospital,1,04-DAVID,10:00 PM,CURRENT
+01 - Lower Manhattan Hospital,2,01-DAVID,05:00 AM,NEXT
+01 - Lower Manhattan Hospital,2,01-GEORGE,08:00 AM,NEXT
+01 - Lower Manhattan Hospital,2,01-VICTOR,07:00 AM,NEXT
+01 - Lower Manhattan Hospital,2,01-WILLIAM,08:00 AM,NEXT
+01 - Lower Manhattan Hospital,2,04-DAVID,06:00 AM,NEXT
+01 - Lower Manhattan Hospital,3,01-DAVID,01:00 PM,NEXT
+01 - Lower Manhattan Hospital,3,01-GEORGE,04:00 PM,NEXT
+01 - Lower Manhattan Hospital,3,01-VICTOR,03:00 PM,NEXT
+01 - Lower Manhattan Hospital,3,01-WILLIAM,04:00 PM,NEXT
+01 - Lower Manhattan Hospital,3,04-DAVID,02:00 PM,NEXT
+14 - Weill Cornell Medical Center,1,10-WILLIAM,11:30 PM,CURRENT
+14 - Weill Cornell Medical Center,1,10-DAVID,11:30 PM,CURRENT
+14 - Weill Cornell Medical Center,2,10-WILLIAM,07:30 AM,NEXT
+14 - Weill Cornell Medical Center,2,08-WILLIAM,07:30 AM,NEXT
+14 - Weill Cornell Medical Center,2,10-DAVID,07:30 AM,NEXT
+14 - Weill Cornell Medical Center,2,10-EDWARD,07:30 AM,NEXT
+14 - Weill Cornell Medical Center,3,10-WILLIAM,03:30 PM,NEXT
+14 - Weill Cornell Medical Center,3,08-WILLIAM,03:30 PM,NEXT
+14 - Weill Cornell Medical Center,3,10-DAVID,03:30 PM,NEXT
+14 - Weill Cornell Medical Center,3,10-EDWARD,03:30 PM,NEXT
+16 - The Allen Hospital,1,13-VICTOR,11:30 PM,CURRENT
+16 - The Allen Hospital,2,13-VICTOR,07:30 AM,NEXT
+16 - The Allen Hospital,2,13-GEORGE,07:00 AM,NEXT
+16 - The Allen Hospital,3,13-VICTOR,03:30 PM,NEXT
+16 - The Allen Hospital,3,13-GEORGE,03:00 PM,NEXT
+17 - Columbia University Medical Center,1,13-IDA,11:30 PM,CURRENT
+17 - Columbia University Medical Center,1,13-YOUNG,11:00 PM,CURRENT
+17 - Columbia University Medical Center,2,13-IDA,07:30 AM,NEXT
+17 - Columbia University Medical Center,2,13-UNION,06:00 AM,NEXT
+17 - Columbia University Medical Center,2,13-YOUNG,07:00 AM,NEXT
+17 - Columbia University Medical Center,3,13-IDA,03:30 PM,NEXT
+17 - Columbia University Medical Center,3,13-UNION,02:00 PM,NEXT
+17 - Columbia University Medical Center,3,13-YOUNG,03:00 PM,NEXT
+31 - New York Presbyterian Queens,1,52-CHARLIE,11:59 PM,CURRENT
+31 - New York Presbyterian Queens,1,52-DAVID,10:00 PM,CURRENT
+31 - New York Presbyterian Queens,1,52-GEORGE,11:00 PM,CURRENT
+31 - New York Presbyterian Queens,1,52-VICTOR,11:30 PM,CURRENT
+31 - New York Presbyterian Queens,1,53-XRAY,11:30 PM,CURRENT
+31 - New York Presbyterian Queens,2,52-CHARLIE,08:00 AM,NEXT
+31 - New York Presbyterian Queens,2,52-DAVID,06:00 AM,NEXT
+31 - New York Presbyterian Queens,2,52-GEORGE,07:00 AM,NEXT
+31 - New York Presbyterian Queens,2,52-VICTOR,07:30 AM,NEXT
+31 - New York Presbyterian Queens,2,53-XRAY,07:30 AM,NEXT
+31 - New York Presbyterian Queens,3,52-CHARLIE,04:00 PM,NEXT
+31 - New York Presbyterian Queens,3,52-DAVID,02:00 PM,NEXT
+31 - New York Presbyterian Queens,3,52-GEORGE,03:00 PM,NEXT
+31 - New York Presbyterian Queens,3,52-VICTOR,03:30 PM,NEXT
+31 - New York Presbyterian Queens,3,53-XRAY,03:30 PM,NEXT
+54 - New York Methodist Hospital,1,48-WILLIAM,10:30 PM,CURRENT
+54 - New York Methodist Hospital,1,48-EDWARD,11:00 PM,CURRENT
+54 - New York Methodist Hospital,2,48-WILLIAM,06:30 AM,NEXT
+54 - New York Methodist Hospital,2,48-EDWARD,07:00 AM,NEXT
+54 - New York Methodist Hospital,3,48-WILLIAM,02:30 PM,NEXT
+54 - New York Methodist Hospital,3,48-EDWARD,03:00 PM,NEXT

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RundownTool.ViewModels"
         mc:Ignorable="d"
-        Title="Referral Tool v3.0b1 - John M. Wilson &lt;jow9023@nyp.org&gt;"
+        Title="Rundown Tool v2.0b1 - John M. Wilson &lt;jow9023@nyp.org&gt;"
         Height="450" Width="650"
         Closed="Window_Closed">
     

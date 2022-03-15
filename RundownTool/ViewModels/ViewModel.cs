@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Globalization;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -122,7 +123,7 @@ namespace RundownTool.ViewModels
         {
             // read template
             using (var reader = new StreamReader(templateFile))
-            using (var csv = new CsvReader(reader))
+            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
                 while (csv.Read())
                 {
                     RundownItem item = new RundownItem
@@ -138,7 +139,7 @@ namespace RundownTool.ViewModels
             // read vehicles and fill in the rest of the RundownItem
             // also to be called when we need to reload vehicles after an update
             using (var reader = new StreamReader(vehiclesFile))
-            using (var csv = new CsvReader(reader))
+            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
                 while (csv.Read())
                 {
                     foreach (RundownItem item in RundownItems)
@@ -161,21 +162,22 @@ namespace RundownTool.ViewModels
 
             // we only care about 911 tours
             using (var reader = new StreamReader(exportPath))
-            using (var csv = new CsvReader(reader))
+            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
             {
                 // Validate that we have 14 records
                 // If emp last name wasn't selected on CSV export, 13 records are expected
                 csv.Read();
                 csv.ReadHeader();
-                if (csv.Context.HeaderRecord.Length != 14)
+                if (csv.HeaderRecord.Length != 14)
                 {
                     StatusText = "Failure - Invalid Export File, header count is low";
                     return;
                 }
                 // Parse the rest of the file
                 while (csv.Read())
-                    if (csv.GetField(5).StartsWith("911-"))
+                    if (csv.GetField(5).StartsWith("911-") || csv.GetField(5).Length == 0)
                     {
+                        // account for the lack of data in field 5 for the MSTU unit
                         string unit = csv.GetField(6).Split(' ')[0];
                         string shield = Regex.Match(csv.GetField(13), @"\b\d{4}\b").Value;
                         // Last name

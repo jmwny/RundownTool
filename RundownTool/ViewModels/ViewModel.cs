@@ -27,7 +27,7 @@ namespace RundownTool.ViewModels
                 if (value != this._gridSelectedItem)
                 {
                     _gridSelectedItem = value;
-                    OnPropertyChanged("GridSelectedItem");
+                    OnPropertyChanged(nameof(GridSelectedItem));
                 }
             }
         }
@@ -41,7 +41,7 @@ namespace RundownTool.ViewModels
                 if (value != this._gridSelectedIndex)
                 {
                     _gridSelectedIndex = value;
-                    OnPropertyChanged("GridSelectedIndex");
+                    OnPropertyChanged(nameof(GridSelectedIndex));
                 }
             }
         }
@@ -55,7 +55,7 @@ namespace RundownTool.ViewModels
                 if (value != this._exportButtonEnable)
                 {
                     _exportButtonEnable = value;
-                    OnPropertyChanged("ExportButtonEnable");
+                    OnPropertyChanged(nameof(ExportButtonEnable));
                 }
             }
         }
@@ -69,7 +69,7 @@ namespace RundownTool.ViewModels
                 if (value != this._processButtonEnable)
                 {
                     _processButtonEnable = value;
-                    OnPropertyChanged("ProcessButtonEnable");
+                    OnPropertyChanged(nameof(ProcessButtonEnable));
                 }
             }
         }
@@ -83,7 +83,7 @@ namespace RundownTool.ViewModels
                 if (value != this._statusText)
                 {
                     _statusText = value;
-                    OnPropertyChanged("StatusText");
+                    OnPropertyChanged(nameof(StatusText));
                 }
             }
         }
@@ -97,7 +97,7 @@ namespace RundownTool.ViewModels
                 if (value != this._rundownItems)
                 {
                     _rundownItems = value;
-                    OnPropertyChanged("RundownItems");
+                    OnPropertyChanged(nameof(RundownItems));
                 }
             }
         }
@@ -105,7 +105,7 @@ namespace RundownTool.ViewModels
 
         public ViewModel()
         {
-            RundownItems = new ObservableCollection<RundownItem>();
+            RundownItems = [];
 
             try {
                 LoadTemplate();
@@ -126,15 +126,14 @@ namespace RundownTool.ViewModels
             using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
                 while (csv.Read())
                 {
-                    RundownItem item = new RundownItem
+                    RundownItems.Add(new RundownItem()
                     {
                         HospitalFullName = csv.GetField(0).Trim(),
                         Tour = csv.GetField(1).Trim(),
                         UnitName = csv.GetField(2).Trim(),
                         StartTime = csv.GetField(3).Trim(),
                         DateSymbolic = csv.GetField(4).Trim()
-                    };
-                    RundownItems.Add(item);
+                    });
                 }
             // read vehicles and fill in the rest of the RundownItem
             // also to be called when we need to reload vehicles after an update
@@ -182,7 +181,7 @@ namespace RundownTool.ViewModels
                         string shield = Regex.Match(csv.GetField(13), @"\b\d{4}\b").Value;
                         // Last name
                         int lastNameIndex = csv.GetField(13).IndexOf(shield);
-                        string lastName = csv.GetField(13).Substring(0, lastNameIndex).Trim();
+                        string lastName = csv.GetField(13)[..lastNameIndex].Trim();
 
                         foreach (RundownItem item in RundownItems)
                             if (item.UnitName == unit)
@@ -211,7 +210,7 @@ namespace RundownTool.ViewModels
 
         internal async void ProcessExport()
         {
-            List<string> hospitalList = new List<string>();
+            List<string> hospitalList = [];
 
             // Generate list of unique hospitals
             foreach (RundownItem item in RundownItems)
@@ -269,11 +268,10 @@ namespace RundownTool.ViewModels
             StatusText = "Completed";
         }
 
-        private string InsertValue(string s, string v)
+        private static string InsertValue(string s, string v)
         {
-            if (v == null)
-                v = string.Empty;
-            int loc = s.IndexOf("@");
+            v ??= string.Empty;
+            int loc = s.IndexOf('@');
             string res = s.Remove(loc, 1).Insert(loc, v);
             return res;
         }
@@ -296,7 +294,7 @@ namespace RundownTool.ViewModels
 
         internal void SaveVehicles()
         {
-            List<string> vehiclesList = new List<string>();
+            List<string> vehiclesList = [];
             foreach (RundownItem item in RundownItems)
             {
                 string vehicleInfo = $"{item.UnitName},{item.VehicleNumber},{item.Radio1},{item.Radio2}";

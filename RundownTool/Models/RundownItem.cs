@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace RundownTool.Models
+﻿namespace RundownTool.Models
 {
     class RundownItem : Notifier
     {
@@ -16,7 +12,7 @@ namespace RundownTool.Models
                 if (value != this._hospitalFullName)
                 {
                     _hospitalFullName = value;
-                    OnPropertyChanged("HospitalFullName");
+                    OnPropertyChanged(nameof(HospitalFullName));
                 }
             }
         }
@@ -30,7 +26,7 @@ namespace RundownTool.Models
                 if (value != this._tour)
                 {
                     _tour = value;
-                    OnPropertyChanged("Tour");
+                    OnPropertyChanged(nameof(Tour));
                 }
             }
         }
@@ -44,7 +40,7 @@ namespace RundownTool.Models
                 if (value != this._unitName)
                 {
                     _unitName = value;
-                    OnPropertyChanged("UnitName");
+                    OnPropertyChanged(nameof(UnitName));
                 }
             }
         }
@@ -58,7 +54,7 @@ namespace RundownTool.Models
                 if (value != this._startTime)
                 {
                     _startTime = value;
-                    OnPropertyChanged("StartTime");
+                    OnPropertyChanged(nameof(StartTime));
                 }
             }
         }
@@ -72,7 +68,7 @@ namespace RundownTool.Models
                 if (value != this._dateSymbolic)
                 {
                     _dateSymbolic = value;
-                    OnPropertyChanged("DateSymbolic");
+                    OnPropertyChanged(nameof(DateSymbolic));
                 }
             }
         }
@@ -87,7 +83,7 @@ namespace RundownTool.Models
                 if (value != this._vehicleNumber)
                 {
                     _vehicleNumber = value;
-                    OnPropertyChanged("VehicleNumber");
+                    OnPropertyChanged(nameof(VehicleNumber));
                 }
             }
         }
@@ -101,7 +97,7 @@ namespace RundownTool.Models
                 if (value != this._radio1)
                 {
                     _radio1 = value;
-                    OnPropertyChanged("Radio1");
+                    OnPropertyChanged(nameof(Radio1));
                 }
             }
         }
@@ -115,7 +111,7 @@ namespace RundownTool.Models
                 if (value != this._radio2)
                 {
                     _radio2 = value;
-                    OnPropertyChanged("Radio2");
+                    OnPropertyChanged(nameof(Radio2));
                 }
             }
         }
@@ -130,7 +126,7 @@ namespace RundownTool.Models
                 if (value != this._crewName1)
                 {
                     _crewName1 = value;
-                    OnPropertyChanged("CrewName1");
+                    OnPropertyChanged(nameof(CrewName1));
                 }
             }
         }
@@ -144,7 +140,7 @@ namespace RundownTool.Models
                 if (value != this._crewShield1)
                 {
                     _crewShield1 = value;
-                    OnPropertyChanged("CrewShield1");
+                    OnPropertyChanged(nameof(CrewShield1));
                 }
             }
         }
@@ -158,7 +154,7 @@ namespace RundownTool.Models
                 if (value != this._crewName2)
                 {
                     _crewName2 = value;
-                    OnPropertyChanged("CrewName2");
+                    OnPropertyChanged(nameof(CrewName2));
                 }
             }
         }
@@ -172,7 +168,7 @@ namespace RundownTool.Models
                 if (value != this._crewShield2)
                 {
                     _crewShield2 = value;
-                    OnPropertyChanged("CrewShield2");
+                    OnPropertyChanged(nameof(CrewShield2));
                 }
             }
         }
